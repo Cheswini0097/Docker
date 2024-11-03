@@ -1,5 +1,0 @@
-FROM almalinux
-RUN yum install git -y
-RUN git init
-RUN git clone https://github.com/Cheswini0097/Docker.git
-RUN git pull
