@@ -1,6 +1,16 @@
-FROM ubuntu
+FROM ubuntu:latest
+
+# Update package lists
 RUN apt-get update -y
-RUN audo apt-get install git -y
-CMD mkdir /repo
-CMD cd /repo
+
+# Install Git
+RUN apt-get install -y git
+
+# Create a directory for the repository
+RUN mkdir /repo
+
+# Set the working directory
+WORKDIR /repo
+
+# Initialize a Git repository
 RUN git init
