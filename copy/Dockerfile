@@ -1,5 +1,5 @@
 FROM ubuntu
-RUN mkdir /devops
-COPY /root/chethu/file1 /devops/
-WORKDIR /devops
-CMD ["bash"] # this command will start the  bash shell in the container
+RUN sudo yum install nginx -y
+RUN rm -rf /usr/share/nginx/html/index.html
+COPY index.html /usr/share/nginx/html/index.html
+CMD ["bash"]
