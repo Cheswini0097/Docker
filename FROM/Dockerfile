@@ -1,0 +1,1 @@
+FROM ubuntu  # from instruction used to call to run os in the container
